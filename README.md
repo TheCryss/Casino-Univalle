@@ -1,2 +1,10 @@
 # CacinoUnivalle
-Miniproyecto 1 de POE
+## Miniproyecto 1 de POE
+ 
+ *aquí ponemos el diagaram UML*
+ 
+---
+*aquí los mockups*
+
+---
+aqui lo que usted quiera creditos tal vez ?

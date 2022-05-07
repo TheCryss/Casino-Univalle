@@ -1,7 +1,7 @@
 # CacinoUnivalle
 ## Miniproyecto 1 de POE
  
- *aquí ponemos el diagaram UML*
+ *aquí ponemos el diagrama UML*
  
 ---
 *aquí los mockups*

@@ -11,8 +11,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-
 
 
 /**
@@ -65,17 +65,32 @@ public class VentanaInicio extends JFrame{
         btnMultijugador.addActionListener(new EventosInicial());
     }
     
+    private void iniciarVentanaNombres(int lanza, int modo){
+        dispose();
+        VentanaNombres ventanaNombres = new VentanaNombres(lanza, modo); 
+    }
+    
     class EventosInicial implements ActionListener{
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            if(e.getSource() == btnUnJugador){
-                System.out.println("J1");
-            }
-            if(e.getSource() == btnMultijugador){
-                System.out.println("J2");
-            }
+            int lanzamientos = 0;
+            int modo = 0;
+            try{
+                lanzamientos = Integer.parseInt(txtLanzamientos.getText());
+                if(e.getSource() == btnUnJugador){
+                    modo = 1;
+                    iniciarVentanaNombres(lanzamientos, modo);
+                }
+                if(e.getSource() == btnMultijugador){
+                    modo = 2;
+                    iniciarVentanaNombres(lanzamientos, modo);
+                }
+            }catch(Exception ex){
+                JOptionPane.showMessageDialog(null, "Ingresa un numero entero",
+                            "Error", 1);
+                    txtLanzamientos.setText(null);
+            }            
         }
-        
     }
 }

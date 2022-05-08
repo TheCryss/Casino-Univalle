@@ -22,7 +22,7 @@ public class VentanaCasino extends JFrame{
     }
     
     public void iniciarComponentes(){
-        setSize(600,400);
+        setSize(730,510);
         setVisible(true);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

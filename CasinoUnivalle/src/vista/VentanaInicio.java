@@ -78,13 +78,20 @@ public class VentanaInicio extends JFrame{
             int modo = 0;
             try{
                 lanzamientos = Integer.parseInt(txtLanzamientos.getText());
-                if(e.getSource() == btnUnJugador){
-                    modo = 1;
-                    iniciarVentanaNombres(lanzamientos, modo);
-                }
-                if(e.getSource() == btnMultijugador){
-                    modo = 2;
-                    iniciarVentanaNombres(lanzamientos, modo);
+                if(lanzamientos <= 0){
+                    JOptionPane.showMessageDialog(null, 
+                            "Ingresa un numero entero mayor a 0",
+                            "Error", 1);
+                    txtLanzamientos.setText(null);
+                }else{
+                    if(e.getSource() == btnUnJugador){
+                        modo = 1;
+                        iniciarVentanaNombres(lanzamientos, modo);
+                    }
+                    if(e.getSource() == btnMultijugador){
+                        modo = 2;
+                        iniciarVentanaNombres(lanzamientos, modo);
+                    }
                 }
             }catch(Exception ex){
                 JOptionPane.showMessageDialog(null, "Ingresa un numero entero",
